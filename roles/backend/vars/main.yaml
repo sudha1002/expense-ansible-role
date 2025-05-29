@@ -1,0 +1,5 @@
+MYSQL_HOST: mysql.devaws.fun
+MYSQL_ROOT: root
+MYSQL_PASSWORD: ExpenseApp@1
+APP LOCATION: /app
+COMPONENT: backend

@@ -1,0 +1,21 @@
+- name: remove existing directory
+  tags:
+  - deployment
+  ansible.builtin.file:
+    path: "{{ app location }}"
+    state: absent
+
+- name: create existing directory
+  tags:
+  - deployment
+  ansible.builtin.file:
+    path: "{{ app location }}"
+    state: directory   
+
+- name: download app code
+  tags:
+  - deployment
+  ansible.builtin.unarchive:
+    src: "{{ }}"
+    dest: "{{ app location }}"
+    remote_src: yes    
